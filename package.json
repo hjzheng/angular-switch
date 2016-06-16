@@ -1,0 +1,26 @@
+{
+  "name": "angular-switch",
+  "version": "1.0.0",
+  "main": "switch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hjzheng/angular-switch.git"
+  },
+  "author": "hjzheng<zhenghaoju700@163.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hjzheng/angular-switch/issues"
+  },
+  "homepage": "https://github.com/hjzheng/angular-switch#readme",
+  "devDependencies": {
+    "angular": "^1.5.7",
+    "gulp": "3.9.1",
+    "gulp-angular-templatecache": "^1.8.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-order": "^1.1.1",
+    "gulp-rename": "^1.2.2"
+  }
+}

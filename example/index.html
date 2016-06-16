@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Switch 练习</title>
+    <link rel="stylesheet" href="../src/switch.css">
+</head>
+<body ng-controller="MainController">
+    <h2>Switch</h2>
+    <p>
+        <ui-switch on="on" off="off" ng-model="test1"></ui-switch>
+        {{test1}}
+        <pre>
+            <code>
+ &lt;ui-switch on="on" off="off" ng-model="test1"&gt;&lt;/ui-switch&gt;
+            </code>
+        </pre>
+    </p>
+    <p>
+        <ui-switch on="开" off="关" ng-model="test2"></ui-switch>
+        {{test2}}
+        <pre>
+            <code>
+ &lt;ui-switch on="开" off="关" ng-model="test2"&gt;&lt;/ui-switch&gt;
+            </code>
+        </pre>
+    </p>
+    <p>
+        <ui-switch on="亮" off="灭" size="large" true-value="亮" false-value="灭"  ng-model="test3"></ui-switch>
+        {{test3}}
+        <pre>
+            <code>
+ &lt;ui-switch on="亮" off="灭" size="large" true-value="亮" false-value="灭"  ng-model="test3"&gt;&lt;/ui-switch&gt;
+            </code>
+        </pre>
+    </p>
+    <p>
+        <ui-switch on="on" off="off" size="small"  true-value="on" false-value="off" color="blue" ng-model="test4"></ui-switch>
+        {{test4}}
+        <pre>
+            <code>
+ &lt;ui-switch on="on" off="off" size="small"  true-value="on" false-value="off" color="blue" ng-model="test4"&gt;&lt;/ui-switch&gt;
+            </code>
+        </pre>
+    </p>
+    <p>
+        <ui-switch on="喜" off="悲"  true-value="on" false-value="off" color="blue" ng-model="test6.switch"></ui-switch>
+        {{test6.switch}}
+        <pre>
+            <code>
+ &lt;ui-switch on="喜" off="悲"  true-value="on" false-value="off" color="blue" ng-model="test6.switch"&gt;&lt;/ui-switch&gt;
+            </code>
+        </pre>
+    </p>
+    <p>
+        <ui-switch on="on" off="off" size="small" color="blue" disabled="true" ng-model="test5"></ui-switch>
+        {{test5}}
+        <pre>
+            <code>
+ &lt;ui-switch on="on" off="off" size="small" color="blue" disabled="true" ng-model="test5"&gt;&lt;/ui-switch&gt;
+            </code>
+        </pre>
+    </p>
+</body>
+<script src="../node_modules/angular/angular.min.js"></script>
+<script src="index.js"></script>
+<script src="../src/switch.js"></script>
+</html>
