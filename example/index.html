@@ -2,11 +2,12 @@
 <html lang="en" ng-app="app">
 <head>
     <meta charset="UTF-8">
-    <title>Switch 练习</title>
-    <link rel="stylesheet" href="../src/switch.css">
+    <title>ui-switch</title>
+    <!--<link rel="stylesheet" href="../src/switch.css">-->
+    <link rel="stylesheet" href="../dist/angular-switch.css">
 </head>
 <body ng-controller="MainController">
-    <h2>Switch</h2>
+    <h2>ui-switch</h2>
     <p>
         <ui-switch on="on" off="off" ng-model="test1"></ui-switch>
         {{test1}}
@@ -63,6 +64,8 @@
     </p>
 </body>
 <script src="../node_modules/angular/angular.min.js"></script>
+<!--<script src="../src/switch.js"></script>-->
+<!--<script src="../src/template.js"></script>-->
+<script src="../dist/angular-switch.tpl.js"></script>
 <script src="index.js"></script>
-<script src="../src/switch.js"></script>
 </html>

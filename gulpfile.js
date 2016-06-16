@@ -10,17 +10,17 @@ gulp.task('templateCache', function () {
 		.pipe(gulp.dest('src'));
 });
 
-gulp.task('JS', function() {
-	return gulp.src('src/*/**.js')
+gulp.task('js', ['templateCache'], function() {
+	return gulp.src('src/**/*.js')
 		.pipe(concat('angular-switch.tpl.js'))
-		.pipe(gulp.dest('./src'));
+		.pipe(gulp.dest('./dist'));
 });
 
-gulp.task('CSS', function() {
-	return gulp.src('src/*/**.css')
+gulp.task('css', function() {
+	return gulp.src('src/**/*.css')
 		.pipe(rename('angular-switch.css'))
-		.pipe(gulp.dest('./src'));
+		.pipe(gulp.dest('./dist'));
 });
 
-gulp.task('default', ['JS', 'CSS']);
+gulp.task('default', ['js', 'css']);
 
