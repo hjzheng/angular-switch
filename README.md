@@ -22,5 +22,7 @@ angular.module('app', ['uiSwitch']);
 ### 举例
 
 ```html
-<ui-switch on="亮" off="灭" size="large" true-value="亮" false-value="灭"  ng-model="test3"></ui-switch>
+<ui-switch on="亮" off="灭" size="large" color="red" true-value="亮" false-value="灭"  ng-model="test3"></ui-switch>
 ```
+
+更多例子 http://get-set.cn/angular-switch/example/
