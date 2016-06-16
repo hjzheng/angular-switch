@@ -45,9 +45,15 @@
 }
 
 .switch.check.blue {
-    box-shadow: rgb(16, 116, 189) 0px 0px 0px 16px inset;
-    border-color: rgb(16, 116, 189);
-    background-color: rgb(16, 116, 189);
+     box-shadow: rgb(54,180,246) 0px 0px 0px 16px inset;
+     border-color: rgb(54,180,246);
+     background-color: rgb(54,180,246);
+}
+
+.switch.check.red {
+    box-shadow: rgb(223,59,58) 0px 0px 0px 16px inset;
+    border-color: rgb(223,59,58);
+    background-color: rgb(223,59,58);
 }
 
 .switch.check > small {
