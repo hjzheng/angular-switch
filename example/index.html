@@ -27,29 +27,29 @@
         </pre>
     </p>
     <p>
-        <ui-switch on="亮" off="灭" size="large" true-value="亮" false-value="灭"  ng-model="test3"></ui-switch>
+        <ui-switch on="亮" off="灭" size="large" true-value="'亮'" false-value="'灭'"  ng-model="test3" on-change="change(value)"></ui-switch>
         {{test3}}
         <pre>
             <code>
- &lt;ui-switch on="亮" off="灭" size="large" true-value="亮" false-value="灭"  ng-model="test3"&gt;&lt;/ui-switch&gt;
+ &lt;ui-switch on="亮" off="灭" size="large" true-value="'亮'" false-value="'灭'"  ng-model="test3"&gt;&lt;/ui-switch&gt;
             </code>
         </pre>
     </p>
     <p>
-        <ui-switch on="on" off="off" size="small"  true-value="on" false-value="off" color="blue" ng-model="test4"></ui-switch>
+        <ui-switch on="on" off="off" size="small"  true-value="'on'" false-value="'off'" color="blue" ng-model="test4"></ui-switch>
         {{test4}}
         <pre>
             <code>
- &lt;ui-switch on="on" off="off" size="small"  true-value="on" false-value="off" color="blue" ng-model="test4"&gt;&lt;/ui-switch&gt;
+ &lt;ui-switch on="on" off="off" size="small"  true-value="'on'" false-value="'off'" color="blue" ng-model="test4"&gt;&lt;/ui-switch&gt;
             </code>
         </pre>
     </p>
     <p>
-        <ui-switch on="喜" off="悲"  true-value="on" false-value="off" color="red" ng-model="test6.switch"></ui-switch>
+        <ui-switch on="喜" off="悲"  true-value="'on'" false-value="'off'" color="red" ng-model="test6.switch"></ui-switch>
         {{test6.switch}}
         <pre>
             <code>
- &lt;ui-switch on="喜" off="悲"  true-value="on" false-value="off" color="red" ng-model="test6.switch"&gt;&lt;/ui-switch&gt;
+ &lt;ui-switch on="喜" off="悲"  true-value="'on'" false-value="'off'" color="red" ng-model="test6.switch"&gt;&lt;/ui-switch&gt;
             </code>
         </pre>
     </p>
@@ -64,7 +64,7 @@
     </p>
     <p>
         <button ng-click="state = !state" type="button">button</button>
-        <ui-switch ng-model="state" ng-change="change()" on="on" off="off"></ui-switch>
+        <ui-switch ng-model="state" on-change="change(value)" on="on" off="off"></ui-switch>
     </p>
 </body>
 <script src="../node_modules/angular/angular.min.js"></script>

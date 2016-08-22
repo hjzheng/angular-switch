@@ -17,6 +17,7 @@ angular.module('app', ['uiSwitch']);
 | true-value    | 字符串 默认为 true      |   设置值 |
 | false-value   | 字符串 默认为 false     |   设置值 |
 | ng-model   | 必填     |   |
+| on-change  | 函数     |   |
 
 
 ### 举例
@@ -26,3 +27,10 @@ angular.module('app', ['uiSwitch']);
 ```
 
 更多例子 http://get-set.cn/angular-switch/example/
+
+
+### 开发
+
+```
+npm run dev
+```

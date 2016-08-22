@@ -3,6 +3,8 @@ var templateCache = require('gulp-angular-templatecache');
 var concat = require('gulp-concat');
 var order = require('gulp-order');
 var rename = require('gulp-rename');
+var browserSync = require('browser-sync');
+var watch = require('gulp-watch');
 
 gulp.task('templateCache', function () {
 	return gulp.src('src/**/*.html')
@@ -22,5 +24,20 @@ gulp.task('css', function() {
 		.pipe(gulp.dest('./dist'));
 });
 
-gulp.task('default', ['js', 'css']);
+gulp.task('browserSync', function() {
+	browserSync({
+		server: {
+			baseDir: '.'
+		}
+	});
+});
+
+gulp.task('watch', function() {
+	watch(['src/**/*.js', 'src/**/*.css', '!src/**/templates.js', 'example/*'], function() {
+		gulp.run('build');
+	});
+});
+
+gulp.task('build', ['js', 'css']);
+gulp.task('dev', ['build', 'browserSync', 'watch']);
 

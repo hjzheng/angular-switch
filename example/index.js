@@ -10,8 +10,8 @@
 			switch: true
 		};
 		$scope.state = false;
-		$scope.change = function () {
-			console.log('触发change函数');
+		$scope.change = function (value) {
+			console.log('触发change函数: ', value);
 		};
 	});
 }());

@@ -2,7 +2,8 @@
   "name": "angular-switch",
   "version": "1.0.0",
   "scripts": {
-    "build": "gulp"
+    "build": "gulp build",
+    "dev": "gulp dev"
   },
   "repository": {
     "type": "git",
@@ -16,10 +17,12 @@
   "homepage": "https://github.com/hjzheng/angular-switch#readme",
   "devDependencies": {
     "angular": "^1.5.7",
+    "browser-sync": "^2.14.0",
     "gulp": "3.9.1",
     "gulp-angular-templatecache": "^1.8.0",
     "gulp-concat": "^2.6.0",
     "gulp-order": "^1.1.1",
-    "gulp-rename": "^1.2.2"
+    "gulp-rename": "^1.2.2",
+    "gulp-watch": "^4.3.9"
   }
 }

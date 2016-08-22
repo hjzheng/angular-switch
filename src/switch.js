@@ -12,36 +12,41 @@
 				color: '@',
 				on: '@',
 				off: '@',
-				trueValue: '@',
-				falseValue: '@',
+				trueValue: '<',
+				falseValue: '<',
 				disabled: '@',
-				ngModel: '='
+				ngModel: '=',
+				onChange: '&'
 			},
-			require: 'ngModel',
+			require: {
+				ngModelCtrl: 'ngModel'
+			},
 			bindToController: true,
-			controller: function() {
+			controller: ['$scope', function($scope) {
 				var vm = this;
 				vm.size = vm.size || 'default';
 				vm.color = vm.color || 'green';
-			},
-			controllerAs: 'vm',
-			link: function(scope, element, attrs, ngModelCtrl) {
 
 				// UI - model
-				element.on('click', function() {
-					if (attrs.disabled) {
+				vm.check = function() {
+					if (vm.disabled) {
 						return;
 					}
 
-					var isActive = element.hasClass('check');
+					var isActive = vm.ngModel === (vm.trueValue || true);
+					var viewValue = !isActive ? vm.trueValue || true : vm.falseValue || false;
 
-					scope.$apply(function() {
-						ngModelCtrl.$setViewValue(!isActive ? attrs.trueValue || true : attrs.falseValue || false);
-						ngModelCtrl.$render();
-					});
+					vm.ngModelCtrl.$setViewValue(viewValue);
+					vm.ngModelCtrl.$render();
+				};
+
+				$scope.$watch('vm.ngModel', function(newValue) {
+					if(vm.onChange) {
+						vm.onChange({value: newValue});
+					}
 				});
-
-			}
+			}],
+			controllerAs: 'vm'
 		};
 	});
 }());
