@@ -9,5 +9,9 @@
 		$scope.test6 = {
 			switch: true
 		};
+		$scope.state = false;
+		$scope.change = function () {
+			console.log('触发change函数');
+		};
 	});
 }());

@@ -62,6 +62,10 @@
             </code>
         </pre>
     </p>
+    <p>
+        <button ng-click="state = !state" type="button">button</button>
+        <ui-switch ng-model="state" ng-change="change()" on="on" off="off"></ui-switch>
+    </p>
 </body>
 <script src="../node_modules/angular/angular.min.js"></script>
 <!--<script src="../src/switch.js"></script>-->

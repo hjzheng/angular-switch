@@ -26,10 +26,6 @@
 			},
 			controllerAs: 'vm',
 			link: function(scope, element, attrs, ngModelCtrl) {
-				// model -> UI
-				ngModelCtrl.$render = function() {
-					element.toggleClass('check', angular.equals(ngModelCtrl.$modelValue, (attrs.trueValue || true)));
-				};
 
 				// UI - model
 				element.on('click', function() {

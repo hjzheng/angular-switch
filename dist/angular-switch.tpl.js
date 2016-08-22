@@ -26,10 +26,6 @@
 			},
 			controllerAs: 'vm',
 			link: function(scope, element, attrs, ngModelCtrl) {
-				// model -> UI
-				ngModelCtrl.$render = function() {
-					element.toggleClass('check', angular.equals(ngModelCtrl.$modelValue, (attrs.trueValue || true)));
-				};
 
 				// UI - model
 				element.on('click', function() {
@@ -50,4 +46,4 @@
 	});
 }());
 
-angular.module("uiSwitch").run(["$templateCache", function($templateCache) {$templateCache.put("switch.html","<span class=\"switch switch-{{vm.size}} {{vm.color}}\" ng-click=\"vm.check()\" ng-class=\"{\'check\': vm.ngModel === (vm.trueValue || true)}\">\n    <small></small>\n    <span class=\"switch-text\"><span class=\"on\">{{vm.on}}</span><span class=\"off\">{{vm.off}}</span></span>\n</span>\n\n");}]);
+angular.module("uiSwitch").run(["$templateCache", function($templateCache) {$templateCache.put("switch.html","<span class=\"switch switch-{{vm.size}} {{vm.color}}\" ng-class=\"{\'check\': vm.ngModel === (vm.trueValue || true)}\">\n    <small></small>\n    <span class=\"switch-text\"><span class=\"on\">{{vm.on}}</span><span class=\"off\">{{vm.off}}</span></span>\n</span>\n\n");}]);
