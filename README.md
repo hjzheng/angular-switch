@@ -17,7 +17,7 @@ angular.module('app', ['uiSwitch']);
 | true-value    | 字符串 默认为 true      |   设置值 |
 | false-value   | 字符串 默认为 false     |   设置值 |
 | ng-model   | 必填     |   |
-| on-change  | 函数     |   |
+| on-change  | 函数     | 当switch值改变时, 触发该函数, 该函数有一个参数 value |
 
 
 ### 举例
